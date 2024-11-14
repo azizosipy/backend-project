@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import DocumentAPIView
+from .views import process_pdf
 
 
 urlpatterns = [
-    path('upload/',DocumentAPIView.as_view(),name='upload')
+    path('analyze/', process_pdf, name='process_pdf'),
 ]
